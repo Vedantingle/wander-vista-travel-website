@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wander Vista - Registration</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scrit.js" defer></script>
+  </head>
+  <body>
+    <main
+      class="min-h-screen w-screen bg-[#FAFAFA] font-[Poppins] flex"
+      id="registration-form-container"
+    >
+      <aside
+        class="sidebar w-[40%] bg-[#1B2B4B] p-12 flex flex-col justify-between max-sm:hidden"
+      >
+        <div>
+          <a href="/" class="logo-link flex items-center gap-2 mb-16">
+            <img
+            src="logo.png"
+              alt="Wander Vista Logo"
+              class="rounded-full"
+              width="40"
+              height="40"
+            />
+            <span class="text-[#D4AF37] text-2xl font-semibold"
+              >Wander Vista</span
+            >
+          </a>
+          <h1 class="text-[#FFFFFF] text-4xl font-bold mb-6">
+            Begin Your Journey of Discovery
+          </h1>
+          <p class="text-[#D4AF37] text-xl mb-8">
+            Join our community of passionate travelers and unlock exclusive
+            destinations worldwide.
+          </p>
+          <div class="benefits-list flex flex-col gap-6 mt-12">
+            <article class="benefit-item flex items-center gap-4">
+              <div
+                class="benefit-icon w-12 h-12 rounded-full bg-[#D4AF37] flex items-center justify-center"
+              >
+                <span class="text-[#1B2B4B] text-xl" aria-hidden="true">✓</span>
+              </div>
+              <div class="benefit-content">
+                <h2 class="text-[#FFFFFF] text-lg font-semibold">
+                  Personalized Travel Plans
+                </h2>
+                <p class="text-[#9BA8C2]">
+                  Customized itineraries based on your preferences
+                </p>
+              </div>
+            </article>
+            <article class="benefit-item flex items-center gap-4">
+              <div
+                class="benefit-icon w-12 h-12 rounded-full bg-[#D4AF37] flex items-center justify-center"
+              >
+                <span class="text-[#1B2B4B] text-xl" aria-hidden="true">✓</span>
+              </div>
+              <div class="benefit-content">
+                <h2 class="text-[#FFFFFF] text-lg font-semibold">
+                  Exclusive Benefits
+                </h2>
+                <p class="text-[#9BA8C2]">
+                  Access to member-only deals and experiences
+                </p>
+              </div>
+            </article>
+            <article class="benefit-item flex items-center gap-4">
+              <div
+                class="benefit-icon w-12 h-12 rounded-full bg-[#D4AF37] flex items-center justify-center"
+              >
+                <span class="text-[#1B2B4B] text-xl" aria-hidden="true">✓</span>
+              </div>
+              <div class="benefit-content">
+                <h2 class="text-[#FFFFFF] text-lg font-semibold">
+                  24/7 Travel Support
+                </h2>
+                <p class="text-[#9BA8C2]">
+                  Dedicated assistance throughout your journey
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="login-link mt-auto">
+          <p class="text-[#9BA8C2] text-sm">
+            <span>Already have an account?</span>
+            <a href="sigup.html" class="text-[#D4AF37] font-medium">Sign in here</a>
+          </p>
+        </div>
+      </aside>
+
+      <section
+        class="form-container flex-1 p-12 flex flex-col items-center justify-center max-w-[800px] mx-auto"
+      >
+        <div class="form-wrapper w-full max-w-[500px]">
+
+          <form id="registration-form" action="create.php" method="post">
+            <!-- Step 1: Basic Info -->
+            <section
+              x-show="step === 1"
+              class="form-step space-y-6"
+              aria-labelledby="step1-heading"
+            >
+              <h2
+                id="step1-heading"
+                class="text-[#1B2B4B] text-3xl font-bold mb-8"
+              >
+                Create Your Account
+              </h2>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-field flex flex-col gap-2">
+                  <label for="firstName" class="text-[#1B2B4B] font-medium"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    x-model="formData.firstName"
+                    class="p-3 rounded-[10px] border-[1px] border-[#E5E5E5] focus:border-[#D4AF37] outline-none"
+                    placeholder="Enter first name"
+                    required
+                  />
+                </div>
+                <div class="form-field flex flex-col gap-2">
+                  <label for="lastName" class="text-[#1B2B4B] font-medium"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    x-model="formData.lastName"
+                    class="p-3 rounded-[10px] border-[1px] border-[#E5E5E5] focus:border-[#D4AF37] outline-none"
+                    placeholder="Enter last name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-field flex flex-col gap-2">
+                <label for="email" class="text-[#1B2B4B] font-medium"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  x-model="formData.email"
+                  class="p-3 rounded-[10px] border-[1px] border-[#E5E5E5] focus:border-[#D4AF37] outline-none"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+            </section><br><br>
+
+            <!-- Step 2: Security -->
+            <section
+              x-show="step === 2"
+              class="form-step space-y-6"
+              aria-labelledby="step2-heading"
+            >
+              <h2
+                id="step2-heading"
+                class="text-[#1B2B4B] text-3xl font-bold mb-8"
+              >
+                Set Up Security
+              </h2>
+              <div class="form-field flex flex-col gap-2">
+                <label for="password" class="text-[#1B2B4B] font-medium"
+                  >Password</label
+                >
+                <div class="password-field relative">
+                  <input
+                    x-bind:type="passwordVisible ? 'text' : 'password'"
+                    id="password"
+                    name="password"
+                    x-model="formData.password"
+                    class="w-full p-3 rounded-[10px] border-[1px] border-[#E5E5E5] focus:border-[#D4AF37] outline-none"
+                    placeholder="Create password"
+                    required
+                  />
+                  <button
+                    x-on:click="togglePasswordVisibility()"
+                    class="toggle-password absolute right-3 top-1/2 transform-[translateY(-50%)] text-[#666666]"
+                    type="button"
+                    aria-label="Toggle password visibility"
+                  >
+                    👁
+                  </button>
+                </div>
+              </div>
+              <div class="form-field flex flex-col gap-2">
+                <label for="confirmPassword" class="text-[#1B2B4B] font-medium"
+                  >Confirm Password</label
+                >
+                <div class="password-field relative">
+                  <input
+                    x-bind:type="confirmPasswordVisible ? 'text' : 'password'"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    x-model="formData.confirmPassword"
+                    class="w-full p-3 rounded-[10px] border-[1px] border-[#E5E5E5] focus:border-[#D4AF37] outline-none"
+                    placeholder="Confirm password"
+                    required
+                  />
+                  <button
+                    x-on:click="toggleConfirmPasswordVisibility()"
+                    class="toggle-password absolute right-3 top-1/2 transform-[translateY(-50%)] text-[#666666]"
+                    type="button"
+                    aria-label="Toggle password visibility"
+                  >
+                    👁
+                  </button>
+                </div>
+              </div>
+            </section><br><br>
+
+            <!-- Step 3: Preferences -->
+            <section
+              x-show="step === 3"
+              class="form-step space-y-6"
+              aria-labelledby="step3-heading"
+            >
+              <h2
+                id="step3-heading"
+                class="text-[#1B2B4B] text-3xl font-bold mb-8"
+              >
+                Address
+              </h2>
+              <div class="form-field flex flex-col gap-2">
+                <label for="phone" class="text-[#1B2B4B] font-medium"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  x-model="formData.phone"
+                  class="p-3 rounded-[10px] border-[1px] border-[#E5E5E5] focus:border-[#D4AF37] outline-none"
+                  placeholder="Enter phone number"
+                />
+              </div>
+              <div class="form-field flex flex-col gap-2">
+                <label for="country" class="text-[#1B2B4B] font-medium"
+                  >Country of Residence</label
+                >
+                <select
+                  id="country"
+                  name="country"
+                  x-model="formData.country"
+                  class="p-3 rounded-[10px] border-[1px] border-[#E5E5E5] focus:border-[#D4AF37] outline-none"
+                >
+                  <option value="">Select country</option>
+                  <option value="us">United States</option>
+                  <option value="uk">India</option>
+                  <option value="au">Australia</option>
+                </select>
+              </div>
+              <button
+                type="submit"
+                class="submit-btn w-full bg-[#D4AF37] text-[#1B2B4B] py-4 rounded-[10px] font-medium mt-8"
+                onclick="window.location.href='sigup.html';"
+              >
+                Complete Registration
+              </button>
+            </section>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

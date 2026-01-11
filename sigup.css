@@ -1,0 +1,61 @@
+/* Custom styles for Wander Vista Login Page */
+
+/* Ensure Poppins font is applied throughout */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fix for transform property in Alpine.js */
+.transform-\[translateY\(-50\%\)\] {
+  transform: translateY(-50%);
+}
+
+/* Ensure proper focus states for accessibility */
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .login-form-section {
+    padding: 2rem 1rem;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+}
+
+
+/* Hover states for interactive elements */
+.submit-button:hover {
+  background-color: #243656;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+.brand-link:hover .brand-name {
+  text-decoration: underline;
+}
+
+/* Ensure proper focus visibility */
+.toggle-password:focus {
+  outline: 2px solid #d4af37;
+  border-radius: 50%;
+}
+
+/* Animation for password toggle */
+.toggle-password {
+  transition: opacity 0.2s ease;
+}
+
+.toggle-password:hover {
+  opacity: 0.8;
+}

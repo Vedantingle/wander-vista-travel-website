@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Wander Vista</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contact.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+    <script src="contact.js" defer></script>
+  </head>
+  <body
+    class="min-h-screen w-screen bg-[#FAFAFA] font-poppins"
+    x-data="contactForm"
+  >
+    <!-- Navigation -->
+    <header>
+      <nav
+        class="bg-primary py-4 px-8 flex justify-between items-center"
+        aria-label="Main navigation"
+      >
+        <div class="flex items-center gap-2">
+          <img
+          src="logo.png"
+            alt="Wander Vista Logo"
+            class="rounded-full"
+            width="40"
+            height="40"
+          />
+          <a href="index.html" class="text-accent text-2xl font-semibold">Wander Vista</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 max-w-[1200px]">
+      <!-- Page Header -->
+      <section class="text-center mb-12" aria-labelledby="page-title">
+        <h1 id="page-title" class="text-4xl font-bold text-primary mb-4">
+          Contact Us
+        </h1>
+        <p class="text-textGray text-lg max-w-2xl mx-auto">
+          We're here to assist you with any questions or concerns about your
+          luxury travel experience.
+        </p>
+      </section>
+
+      <!-- Contact Information Cards -->
+      <section
+        class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12"
+        aria-label="Contact information"
+      >
+        <!-- Email Card -->
+        <article class="bg-white p-8 rounded-card shadow-card text-center">
+          <div
+            class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+            aria-hidden="true"
+          >
+            <svg
+              class="w-8 h-8 text-accent"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+              ></path>
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold text-primary mb-2">Email Us</h2>
+          <p class="text-textGray mb-4">For general inquiries and assistance</p>
+          <a
+            href="mailto:contact@wandervista.com"
+            class="text-accent font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-sm"
+          >
+            contact@wandervista.com
+          </a>
+        </article>
+
+        <!-- Phone Card -->
+        <article class="bg-white p-8 rounded-card shadow-card text-center">
+          <div
+            class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+            aria-hidden="true"
+          >
+            <svg
+              class="w-8 h-8 text-accent"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 15.5C18.8 15.5 17.5 15.3 16.4 14.9H16.1C15.8 14.9 15.6 15 15.4 15.2L13.2 17.4C10.4 15.9 8 13.6 6.6 10.8L8.8 8.6C9.1 8.3 9.2 7.9 9 7.6C8.7 6.5 8.5 5.2 8.5 4C8.5 3.5 8 3 7.5 3H4C3.5 3 3 3.5 3 4C3 13.4 10.6 21 20 21C20.5 21 21 20.5 21 20V16.5C21 16 20.5 15.5 20 15.5Z"
+              ></path>
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold text-primary mb-2">Call Us</h2>
+          <p class="text-textGray mb-4">24/7 Travel Support</p>
+          <a
+            href="tel:+1234567890"
+            class="text-accent font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-sm"
+          >
+            +91 31234 56789
+          </a>
+        </article>
+
+        <!-- Visit Card -->
+        <article class="bg-white p-8 rounded-card shadow-card text-center">
+          <div
+            class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+            aria-hidden="true"
+          >
+            <svg
+              class="w-8 h-8 text-accent"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+              ></path>
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold text-primary mb-2">Visit Us</h2>
+          <p class="text-textGray mb-4">Luxury Travel Office</p>
+          <address class="text-accent font-medium not-italic">
+            <span>123 Travel Plaza, Suite 500</span>
+            <br />
+            <span>Nagpur, India</span>
+          </address>
+        </article>
+      </section>
+
+      <!-- Contact Form -->
+      <div x-data="contactForm">
+        <section class="bg-white rounded-card p-8 shadow-card" aria-labelledby="form-title">
+            <div class="max-w-3xl mx-auto">
+                <h2 id="form-title" class="text-2xl font-bold text-primary mb-8 text-center">
+                    Send Us a Message
+                </h2>
+    
+                <!-- Contact Form -->
+                <form x-on:submit.prevent="submitForm()" class="space-y-6" aria-label="Contact form">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label for="name" class="text-primary font-medium">Full Name</label>
+                            <input type="text" id="name" x-model="form.name" class="p-3 rounded-input border border-lightGray focus:border-accent outline-none" required />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="email" class="text-primary font-medium">Email Address</label>
+                            <input type="email" id="email" x-model="form.email" class="p-3 rounded-input border border-lightGray focus:border-accent outline-none" required />
+                        </div>
+                    </div>
+    
+                    <div class="flex flex-col gap-2">
+                        <label for="message" class="text-primary font-medium">Message</label>
+                        <textarea id="message" x-model="form.message" rows="6" class="p-3 rounded-input border border-lightGray focus:border-accent outline-none" required></textarea>
+                    </div>
+    
+                    <button type="submit" class="w-full bg-primary text-white py-4 rounded-input font-medium hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    
+        <!-- Success Popup Message -->
+        <div x-show="showSuccessMessage" x-transition class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h2 class="text-lg font-bold text-primary">Success!</h2>
+                <p class="text-gray-700">Your message has been sent successfully.</p>
+                <button @click="showSuccessMessage = false" class="mt-4 bg-primary text-white px-4 py-2 rounded">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    </main>
+    <script>
+      document.addEventListener("alpine:init", () => {
+    Alpine.data("contactForm", () => ({
+        contactType: "general",  // Default selected type
+        showSuccessMessage: false, // Controls success message visibility
+
+        form: {
+            name: "",
+            email: "",
+            phone: "",
+            subject: "",
+            bookingRef: "",
+            message: "",
+            preferredContact: "email",
+        },
+
+        submitForm() {
+
+            console.log("Form Submitted:", this.form);
+
+            // Show success message
+            this.showSuccessMessage = true;
+
+            // Hide success message after 3 seconds
+            setTimeout(() => {
+                this.showSuccessMessage = false;
+                this.resetForm();
+            }, 3000);
+        },
+
+        resetForm() {
+            this.form = {
+                name: "",
+                email: "",
+                phone: "",
+                subject: "",
+                bookingRef: "",
+                message: "",
+                preferredContact: "email",
+            };
+        },
+    }));
+});
+
+    </script>
+  </body>
+</html>

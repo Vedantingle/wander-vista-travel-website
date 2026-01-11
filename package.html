@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wander Vista - Luxury Travel Packages</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="package.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="site-header">
+        <nav class="main-nav">
+          <div class="brand">
+            <img
+            src="logo.png"
+              alt="Wander Vista Logo"
+              class="logo"
+            />
+            <a href="index.html" class="brand-name">Wander Vista</a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="packages-section">
+          <h1 class="section-title">Luxury Travel Packages</h1>
+
+          <div class="filter-controls">
+            <div class="category-filters">
+              <button class="category-btn active" data-category="all">
+                All Packages
+              </button>
+              <button class="category-btn" data-category="culture">
+                Cultural
+              </button>
+              <button class="category-btn" data-category="beach">Beach</button>
+              <button class="category-btn" data-category="mountains">
+                Mountains
+              </button>
+              <button class="category-btn" data-category="nature">
+                Nature
+              </button>
+            </div>
+
+            <div class="price-filter">
+              <label for="price-range" class="price-label">Price Range</label>
+              <input
+                type="range"
+                id="price-range"
+                class="price-slider"
+                min="1000"
+                max="10000"
+                step="500"
+                value="10000"
+                aria-valuemin="1000"
+                aria-valuemax="10000"
+                aria-valuenow="10000"
+              />
+              <div class="price-range-values">
+                <span class="min-price">$1,000</span>
+                <span class="current-price">$10,000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="packages-grid" id="packages-container">
+            <!-- Packages will be dynamically inserted here -->
+          </div>
+        </section>
+      </main>
+
+      <!-- Package Details Modal -->
+      <div
+        class="modal-overlay details-modal"
+        id="details-modal"
+        aria-hidden="true"
+      >
+        <div class="modal-content" role="dialog" aria-labelledby="modal-title">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modal-title"></h2>
+            <button class="close-btn" aria-label="Close details">
+              <svg
+                class="close-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img class="package-image" alt="" />
+            <div class="package-details-grid">
+              <div class="package-info">
+                <h3 class="details-subtitle">Package Details</h3>
+                <p class="package-description"></p>
+                <div class="package-pricing">
+                  <span class="package-price"></span>
+                  <span class="package-duration"></span>
+                </div>
+              </div>
+              <div class="package-includes">
+                <h3 class="details-subtitle">Includes</h3>
+                <ul class="includes-list">
+                  <!-- Includes will be dynamically inserted here -->
+                </ul>
+              </div>
+            </div>
+            <div class="package-itinerary">
+              <h3 class="details-subtitle">Itinerary</h3>
+              <div class="itinerary-grid">
+                <!-- Itinerary will be dynamically inserted here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Modal -->
+      <div
+        class="modal-overlay booking-modal"
+        id="booking-modal"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-content"
+          role="dialog"
+          aria-labelledby="booking-title"
+        >
+          <div class="modal-header">
+            <h2 class="modal-title" id="booking-title">
+              Book <span id="booking-package-name"></span>
+            </h2>
+            <button class="close-btn" aria-label="Close booking form">
+              <svg
+                class="close-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="booking-form" id="booking-form">
+              <div class="form-group">
+                <label for="travel-date" class="form-label">Travel Date</label>
+                <input
+                  type="date"
+                  id="travel-date"
+                  class="form-input"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="travelers" class="form-label"
+                  >Number of Travelers</label
+                >
+                <input
+                  type="number"
+                  id="travelers"
+                  class="form-input"
+                  min="1"
+                  placeholder="Enter number of travelers"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="special-requests" class="form-label"
+                  >Special Requests</label
+                >
+                <textarea
+                  id="special-requests"
+                  class="form-textarea"
+                  rows="3"
+                  placeholder="Any special requests?"
+                ></textarea>
+              </div>
+              <button type="submit" class="booking-btn">Confirm Booking</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="package.js"></script>
+  </body>
+</html>
