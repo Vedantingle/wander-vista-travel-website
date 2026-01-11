@@ -88,7 +88,7 @@ Start Apache & MySQL using XAMPP
 
 Open in browser:
 
-http://localhost/wander-vista-travel-website/index.html
+http: //localhost/wander-vista-travel-website/index.html
 
 🎯 Purpose of This Project
 
