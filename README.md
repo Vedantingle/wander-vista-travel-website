@@ -120,21 +120,3 @@ Computer Engineering Student | UI/UX & Web Development
 📜 License
 
 This project is for learning and portfolio purposes only.
-
-
----
-
-## 4. Final Brutal Advice (Read This Carefully)
-
-- Your **code is decent**, but your **structure is inconsistent**  
-  (`sigup` typo alone shows carelessness — fix it later).
-- You are good at UI, but you **avoid backend depth**. That’s your blind spot.
-- Uploading this cleanly on GitHub is **not optional** if you want internships or UI/UX credibility.
-- This README already puts you **above 70% of students** — if you mess this up, it’s on you.
-
-If you want, next I can:
-- Fix your **folder structure properly**
-- Rewrite this as a **portfolio-grade case study**
-- Audit your project like a recruiter would
-
-Say the word and be specific.
